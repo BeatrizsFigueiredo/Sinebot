@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - BotMob</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right,#f25e09 0%, #3601f6 100%);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .login-card {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 1rem;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        }
+        .btn-login {
+            background-color: #6a11cb;
+            border-color: #6a11cb;
+        }
+        .btn-login:hover {
+            background-color: #5a0cb7;
+            border-color: #5a0cb7;
+        }
+        .password-toggle {
+            cursor: pointer;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .logo-container {
+            background-color: #f8f9fa;
+            border-radius: 1rem 0 0 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .logo-container img {
+            max-width: 150px;  /* Ajuste o tamanho da sua logo aqui */
+            max-height: 150px; /* Ajuste o tamanho da sua logo aqui */
+            object-fit: contain;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-lg-8">
+                <div class="card login-card">
+                    <div class="row g-0">
+                        <div class="col-md-4 logo-container">
+                            <!-- Substitua 'logo.png' pelo nome do seu arquivo de logo -->
+                            <img src="icone.png" alt="Logo BotMob">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body p-5">
+                                <h2 class="text-center mb-4">Bem Vindo</h2>
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="text" class="form-label">Login</label>
+                                        <input type="text" class="form-control" id="login" placeholder="sinetram.sntr" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="password" class="form-label">Senha</label>
+                                        <div class="position-relative">
+                                            <input type="password" class="form-control" id="password" placeholder="••••••••" required>
+                                            <span class="password-toggle" onclick="togglePassword()">
+                                                <i class="bi bi-eye"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="d-grid gap-2 mt-4">
+                                        <button type="submit" class="btn btn-primary btn-login">Entrar</button>
+                                    </div>
+                                </form>
+                                <div class="text-center mt-3">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script>
+        function togglePassword() {
+            const passwordInput = document.getElementById('password');
+            const icon = document.querySelector('.password-toggle i');
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                icon.classList.replace('bi-eye', 'bi-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                icon.classList.replace('bi-eye-slash', 'bi-eye');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - BotMob</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right,#f25e09 0%, #3601f6 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .dashboard-card {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 1rem;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        }
+        .dropdown-toggle {
+            background-color: #f8f9fa;
+            border: 2px solid #6a11cb;
+            color: #6a11cb;
+            transition: all 0.3s ease;
+        }
+        .dropdown-toggle:hover, .dropdown-toggle:focus {
+            background-color: #6a11cb;
+            color: white;
+        }
+        .dropdown-menu {
+            width: 100%;
+            border: 2px solid #6a11cb;
+        }
+        .dropdown-item:hover {
+            background-color: #e9ecef;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="card dashboard-card">
+                    <div class="card-body p-5">
+                        <h2 class="text-center mb-4">BotMob</h2>
+                        <p class="text-center mb-4">Cartões ON</p>
+                        
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="dropdown">
+                                    <button class="btn dropdown-toggle w-100" type="button" id="dropdownComum" data-bs-toggle="dropdown" aria-expanded="false">
+                                        COMUM
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownComum">
+                                        <li><a class="dropdown-item" href="#" onclick="selectOption('COMUM', 'Impressão de Cartão')">Impressão de Cartão</a></li>
+                                        <li><a class="dropdown-item" href="#" onclick="selectOption('COMUM', 'Criar Cadastro')">Criar Cadastro</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="dropdown">
+                                    <button class="btn dropdown-toggle w-100" type="button" id="dropdownEscolar" data-bs-toggle="dropdown" aria-expanded="false">
+                                        ESCOLAR
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownEscolar">
+                                        <li><a class="dropdown-item" href="#" onclick="selectOption('ESCOLAR', 'Impressão de Cartão')">Impressão de Cartão</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="dropdown">
+                                    <button class="btn dropdown-toggle w-100" type="button" id="dropdownVT" data-bs-toggle="dropdown" aria-expanded="false">
+                                        VT
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownVT">
+                                        <li><a class="dropdown-item" href="#" onclick="selectOption('VT', 'Impressão de Cartão')">Impressão de Cartão</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <a href="index.html" class="btn btn-outline-primary">Voltar para Login</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function selectOption(category, action) {
+            // Redirecionar apenas se a ação for "Impressão de Cartão" ou se for "Criar Cadastro" para COMUM
+            if (action === 'Impressão de Cartão' || (category === 'COMUM' && action === 'Criar Cadastro')) {
+                window.location.href = `card-options.html?category=${category}&action=${action}`;
+            } else {
+                alert('Opção não disponível para este tipo de cartão.');
+            }
+        }
+    </script>
+</body>
+</html>
+
