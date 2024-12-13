@@ -3,7 +3,7 @@
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: linear-gradient(45deg, #3498db, #e67e22);
+    background: linear-gradient(45deg, #0e2cda, #f17508);
     transition: all 0.3s ease-in-out;
     padding: 10px 0;
     background-size: 200% 200%;
