@@ -18,6 +18,19 @@ body {
     border-color: var(--primary-orange);
 }
 
+header {
+    padding: 10px 0; /* Reduz o espaçamento interno */
+}
+
+header h1 {
+    font-size: 1.8rem; /* Ajuste o tamanho da fonte do título */
+    margin: 0; /* Remove margens adicionais */
+}
+
+header img {
+    height: 150px; /* Ajuste a altura da imagem */
+}
+
 .btn-primary:hover {
     background-color: var(--secondary-orange);
     border-color: var(--secondary-orange);
