@@ -23,18 +23,30 @@ body {
     border-color: var(--secondary-orange);
 }
 
+/* Ajuste do tamanho e estilo da navbar */
 .navbar {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 15px; /* Ajuste o espaçamento interno */
+    height: 60px; /* Define a altura total */
 }
 
+/* Links dentro da navbar */
 .navbar-light .navbar-nav .nav-link {
     color: var(--primary-blue);
+    font-size: 16px; /* Ajusta o tamanho do texto */
+    padding: 5px 10px; /* Espaçamento interno dos links */
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
     color: var(--secondary-blue);
 }
 
+/* Ícone do menu em telas menores */
+.navbar-toggler {
+    padding: 5px 10px;
+}
+
+/* Ajustes no carousel */
 #carousel .carousel-item img {
     object-fit: cover;
     height: 400px;
@@ -57,7 +69,7 @@ body {
     background-color: #f8f9fa;
 }
 
+/* Estilo do footer */
 footer {
     background-color: var(--primary-blue) !important;
 }
-
