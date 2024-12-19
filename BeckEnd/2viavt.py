@@ -9,7 +9,7 @@ import time
 import re
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.alert import Alert
-from segundaviaobs import processo_secundario
+from BeckEnd.segundaviaobs import processo_secundario
 
 # Carregar os dados do Excel
 criar_cadastro = pd.read_excel('cartao vt_2.xlsx', sheet_name='GARANTIDO', engine='openpyxl')

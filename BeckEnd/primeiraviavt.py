@@ -6,7 +6,7 @@ import pandas as pd
 import time
 import re
 from selenium.common.exceptions import StaleElementReferenceException
-from primeiraiviaobs import processo_vt2
+from BeckEnd.primeiraiviaobs import processo_vt2
 
 #IMPRIME 1ª VIA VT 
 #Carregar os dados do Excel
